@@ -1,0 +1,10 @@
+https://enowa.neom.com,
+https://www.unsplash.com,
+https://www.giphy.com,
+https://www.microsoft.com,
+https://www.netflix.com,
+https://www.espn.com,
+https://www.spotify.com,
+https://www.nespresso.com,
+https://www.pizzahut.com,
+https://www.jaguar.com
