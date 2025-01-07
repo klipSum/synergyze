@@ -10,22 +10,14 @@
         // VARIABLES FOR MAIN PAGE ---------------------------------------------------
         // ///////////////////////////////////////////////////////////////////////////
 
-            var getMainPageContainer = document.querySelector(".scriptedMainElementsControl")
-
         // VARIABLES FOR NAV BAR SECTION ---------------------------------------------
         // ///////////////////////////////////////////////////////////////////////////
 
         // VARIABLES FOR SEARCH BAR SECTION ------------------------------------------
         // ///////////////////////////////////////////////////////////////////////////
 
-            var getSearchBarInput = document.querySelector(".scriptedMainSearchElementSearchBarElementInputActual")
-            var getSearchBarSearchButton = document.querySelector(".scriptedMainSearchElementSearchBarButtonSideClickerActual")
-
         // VARIABLES FOR RESULTS SECTION ---------------------------------------------
         // ///////////////////////////////////////////////////////////////////////////
-
-            var createResultsSection = document.createElement("div")
-            createResultsSection.className = "scriptedMainElementsResultsContainer"
 
 
 
@@ -41,16 +33,6 @@
 
         // BUILD STRING VARIABLES FOR SEARCH BAR SECTION =============================
         // ///////////////////////////////////////////////////////////////////////////
-
-            var questionsLocalSessionStringBuild = sessionStorage.getItem("questions")
-            var resultsImagesLocalSessionStringBuild = sessionStorage.getItem("resultsImages")
-            var answersLocalSessionStringBuild = sessionStorage.getItem("answers")
-            var imagesLocalSessionStringBuild = sessionStorage.getItem("images")
-            var sloganLocalSessionStringBuild = sessionStorage.getItem("slogan")
-            var linksLocalSessionStringBuild = sessionStorage.getItem("links")
-
-
-            var getSearchClickerDisplaySetting = "block"
 
         // BUILD STRING VARIABLES FOR RESULTS SECTION ================================
         // ///////////////////////////////////////////////////////////////////////////
@@ -73,7 +55,6 @@
             var makeLoadingResultsStallArray = [100, 200, 500, 1000, 2000, 5000]
             var collectQuestions = []
             var collectAnswers = []
-            var collectImages = []
             var collectSlogan = []
             var collectLinks = []
 
@@ -148,10 +129,6 @@
         // NUMBER COLLECT AND COUNTER VARIABLES FOR SEARCH BAR SECTION ===============
         // ///////////////////////////////////////////////////////////////////////////
 
-            var getSplitLengthElementsNumber = 0
-            var numberForInputQuestionAsked = 0
-            var numberForQuestionedAskedCounter = 0
-
         // NUMBER COLLECT AND COUNTER VARIABLES FOR RESULTS SECTION ==================
         // ///////////////////////////////////////////////////////////////////////////
 
@@ -212,152 +189,7 @@
                         .then(res => res.text())
                         .then((text) => {
                             
-                            sessionStorage.setItem("questions", text)
-
-
-
-
-
-                            // THEN RUN POPULATION AND SPLITS ////////////////////////
-                            // ///////////////////////////////////////////////////////
-
-                                if ( questionsLocalSessionStringBuild == null || questionsLocalSessionStringBuild == undefined ) {
-
-                                    console.log("haluscinate...")
-
-                                        // POPULATE WITH DEFAULT DATABASE OFFLINE MODE
-                                        // //////////////////////////////////////////
-
-                                            
-
-                                }
-
-                                else {
-                                    
-                                    
-                                    // SPLIT TEXT AND RUN THROUGH FOR ARRAY POPULATION
-                                    // ///////////////////////////////////////////////
-
-                                       var prepSplitStringStore = questionsLocalSessionStringBuild.split(",")
-
-                                       getSplitLengthElementsNumber = prepSplitStringStore.length
-
-
-                                            // RUN LOOP FOR ARRAY POPULATION .........
-                                            // .......................................
-
-                                                for ( questionsSplitterCounter = 0; questionsSplitterCounter < getSplitLengthElementsNumber; questionsSplitterCounter ++ ) {
-
-                                                    collectQuestions.push(prepSplitStringStore[questionsSplitterCounter].toLocaleLowerCase())
-
-                                                }
-
-                                                        console.log("HERE BE: " + collectQuestions)
-
-
-
-
-
-
-
-                                    
-                                    
-                                    // RUN REST OF POPULATION PROGRAME FOR ALL ELEMNTS
-                                    // ///////////////////////////////////////////////
-
-                                        getAnswers()
-                                        getImages()
-                                        getSlogan()
-                                        getLinks()
-
-
-
-
-
-
-
-                                    
-                                    
-                                    // COLLECT ALL OTHER STORED VALUES ---------------
-                                    // ///////////////////////////////////////////////
-
-                                        // COLLECT ANSWERS ===========================
-                                        // ///////////////////////////////////////////
-                                    
-                                            // SPLIT TEXT AND RUN THROUGH FOR ARRAY POPULATION
-                                            // ///////////////////////////////////////
-
-                                                var prepAnswersSplitStringStore = answersLocalSessionStringBuild.split(",")
-
-                                                getSplitLengthElementsNumber = prepAnswersSplitStringStore.length
-
-
-                                                        // RUN LOOP FOR ARRAY POPULATION
-                                                        // ...........................
-
-                                                            for ( answersSplitterCounter = 0; answersSplitterCounter < getSplitLengthElementsNumber; answersSplitterCounter ++ ) {
-
-                                                                collectAnswers.push(prepAnswersSplitStringStore[answersSplitterCounter].toLocaleLowerCase())
-
-                                                            }
-
-                                                                    console.log("LIBSUM ANSWERS: " + collectAnswers)
-
-
-
-                                                                    
-
-                                        // COLLECT LINKS =============================
-                                        // ///////////////////////////////////////////
-                                    
-                                            // SPLIT TEXT AND RUN THROUGH FOR ARRAY POPULATION
-                                            // ///////////////////////////////////////
-
-                                                var prepLinksSplitStringStore = linksLocalSessionStringBuild.split(",")
-
-                                                getSplitLengthElementsNumber = prepLinksSplitStringStore.length
-
-
-                                                        // RUN LOOP FOR ARRAY POPULATION
-                                                        // ...........................
-
-                                                            for ( linksSplitterCounter = 0; linksSplitterCounter < getSplitLengthElementsNumber; linksSplitterCounter ++ ) {
-
-                                                                collectLinks.push(prepLinksSplitStringStore[linksSplitterCounter].toLocaleLowerCase())
-
-                                                            }
-
-                                                                    console.log("BEENIE LINKS: " + collectLinks)
-
-
-
-                                                                    
-
-                                        // COLLECT LINKS =============================
-                                        // ///////////////////////////////////////////
-                                    
-                                            // SPLIT TEXT AND RUN THROUGH FOR ARRAY POPULATION
-                                            // ///////////////////////////////////////
-
-                                                var prepSloganSplitStringStore = sloganLocalSessionStringBuild
-
-
-                                                    // RUN LOOP FOR ARRAY POPULATION
-                                                    // ...........................
-
-                                                        collectSlogan.push(prepSloganSplitStringStore.toLocaleLowerCase())
-
-                                                            console.log("SLOGAN UPDATE: " + collectSlogan)
-
-
-                                                                // UPDATE PAGE SLOGAN
-                                                                // >>>>>>>>>>>>>>>
-
-                                                                    var getSloganTextActual = document.querySelector(".scriptedMainSubHeaderActual")
-
-                                                                        getSloganTextActual.textContent = `${collectSlogan}`
-
-                                }
+                            collectQuestions.push(text)
                         
                         })
 
@@ -384,7 +216,7 @@
                             .then(res => res.text())
                             .then((text) => {
                                 
-                                sessionStorage.setItem("answers", text)
+                                collectAnswers.push(text)
 
                             })
 
@@ -398,61 +230,7 @@
 
 
 
-                // COLLECT IMAGES ====================================================
-                // ///////////////////////////////////////////////////////////////////
-
-                    function getImages () {
-
-                        // RETRIEVE CONTENTS AND STORE IN LOCAL MEMORY ...................
-                        // ...............................................................
-    
-                            fetch("/dox/images.txt")
-                            .then(res => res.text())
-                            .then((text) => {
-                                
-                                sessionStorage.setItem("images", text)
-
-                            })
-
-
-                    }
-
-
-
-                
-
-
-
-
-                // COLLECT ANSWERS ===================================================
-                // ///////////////////////////////////////////////////////////////////
-
-                    function getLinks () {
-
-                        // RETRIEVE CONTENTS AND STORE IN LOCAL MEMORY ...............
-                        // ...........................................................
-    
-                            fetch("/dox/links.txt")
-                            .then(res => res.text())
-                            .then((text) => {
-                                
-                                sessionStorage.setItem("links", text)
-
-
-
-                            })
-
-
-                    }
-
-
-
-                
-
-
-
-
-                // COLLECT ANSWERS ===================================================
+                // COLLECT SLOGAN ====================================================
                 // ///////////////////////////////////////////////////////////////////
 
                     function getSlogan () {
@@ -464,7 +242,35 @@
                             .then(res => res.text())
                             .then((text) => {
                                 
-                                sessionStorage.setItem("slogan", text)
+                                collectSlogan.push(text)
+
+
+
+                            })
+
+
+                    }
+
+
+
+                
+
+
+
+
+                // COLLECT LINKS =====================================================
+                // ///////////////////////////////////////////////////////////////////
+
+                    function getLinks () {
+
+                        // RETRIEVE CONTENTS AND STORE IN LOCAL MEMORY ...............
+                        // ...........................................................
+    
+                            fetch("/dox/links.txt")
+                            .then(res => res.text())
+                            .then((text) => {
+                                
+                                collectLinks.push(text)
 
 
 
@@ -484,408 +290,18 @@
 
 
 
-        // RUN RESULTS SEARCH ON BUTTON CLICK ----------------------------------------
-        // ///////////////////////////////////////////////////////////////////////////
+    // RUN FUNCTIONS FOR RESULTS SEARCH ON BUTTON CLICK ------------------------------
+    // ///////////////////////////////////////////////////////////////////////////////
 
-            function runSearch () {
 
-                console.log("searching")
 
-                // CREATE RESULTS SECTION AND RELATED ELEMENTS =======================
-                // ///////////////////////////////////////////////////////////////////
 
-                    // RUN MAIN RESULTS SECTION CREATION -----------------------------
-                    // ///////////////////////////////////////////////////////////////
 
-                        createResultsSectionOnce()
 
-                    // GET LOADER CLOCK MAIN BLOCK VARIABLE --------------------------
-                    // ///////////////////////////////////////////////////////////////
 
-                        var getLoaderBlockMain = document.querySelector(".scriptedResultsMainSectionLoadingBlockerContainer")
 
-                        var getLoaderBlockInnerBlock = document.querySelector(".scriptedResultsMainSectionLoaderActual")
 
-
-                            var randomlySelectThinkingImage = makeLoadingResultsImage[(Math.floor(Math.random() * makeLoadingResultsImage.length))];
-
-
-
-
-
-
-
-
-
-                        
-
-                // CUSTOMIZE BUTTON BEHAVIOR =========================================
-                // ///////////////////////////////////////////////////////////////////
-
-                    // DISAPPEAR BUTTON IMMEDIATELY ==================================
-                    // ///////////////////////////////////////////////////////////////
-
-
-                        getSearchClickerDisplaySetting = "none"
-
-
-                        getSearchBarSearchButton.style = `
-                        
-                            width:100%;
-                            height:100%;
-                            top:0;
-                            left:0;
-                            right:0;
-                            bottom:0;
-                            z-index:1;
-                            margin:auto;
-                            cursor:pointer;
-                            opacity:0;
-                            display:${getSearchClickerDisplaySetting};
-                            background:#2c2c2c;
-                            position:absolute;
-                            transition:all 600ms ease;
-                            -o-transition:all 600ms ease;
-                            -ms-transition:all 600ms ease;
-                            -moz-transition:all 600ms ease;
-                            -webkit-transition:all 600ms ease;
-
-                        `
-
-                            // TURN ON LOADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                            // ///////////////////////////////////////////////////////
-                                
-                                                    
-                                getLoaderBlockMain.style = `
-
-                                    width:100%;
-                                    height:100%;
-                                    top:0;
-                                    left:0;
-                                    right:0;
-                                    bottom:0;
-                                    margin:auto;
-                                    z-index:2;
-                                    display:block;
-                                    position:fixed;
-                                    background:rgba(255, 255, 255, 0.5);
-                                    backdrop-filter:blur(10px);
-                                    transition:all 600ms ease;
-                                    -o-transition:all 600ms ease;
-                                    -ms-transition:all 600ms ease;
-                                    -moz-transition:all 600ms ease;
-                                    -webkit-transition:all 600ms ease;
-
-                                `
-
-                                getLoaderBlockInnerBlock.style = `
-                                
-                                    width:80%;
-                                    height:80%;
-                                    top:0;
-                                    left:0;
-                                    right:0;
-                                    bottom:0;
-                                    margin:auto;
-                                    background:url("${randomlySelectThinkingImage}");
-                                    background-size:cover;
-                                    background-repeat:no-repeat;
-                                    background-position:center;
-                                    position:absolute;
-                                    border-radius:8px;
-                                    transition:all 600ms ease;
-                                    -o-transition:all 600ms ease;
-                                    -ms-transition:all 600ms ease;
-                                    -moz-transition:all 600ms ease;
-                                    -webkit-transition:all 600ms ease;
-                                
-                                `
-
-
-
-                                    // BRING BACK AFTER SELECTED RANDOM TIMER SELECT =
-                                    // ///////////////////////////////////////////////
-
-                                        // SELECT RANDOM TIME STALLER ----------------
-                                        // ///////////////////////////////////////////
-
-                                            var getRandomStaller = makeLoadingResultsStallArray[(Math.floor(Math.random() * makeLoadingResultsStallArray.length))];
-
-                                            setTimeout(() => {
-
-                                                
-
-                                                    getSearchClickerDisplaySetting = "block"
-
-
-                                                    getSearchBarSearchButton.style = `
-                                
-                                                        width:100%;
-                                                        height:100%;
-                                                        top:0;
-                                                        left:0;
-                                                        right:0;
-                                                        bottom:0;
-                                                        z-index:1;
-                                                        margin:auto;
-                                                        cursor:pointer;
-                                                        opacity:0;
-                                                        display:${getSearchClickerDisplaySetting};
-                                                        background:#2c2c2c;
-                                                        position:absolute;
-                                                        transition:all 600ms ease;
-                                                        -o-transition:all 600ms ease;
-                                                        -ms-transition:all 600ms ease;
-                                                        -moz-transition:all 600ms ease;
-                                                        -webkit-transition:all 600ms ease;
-
-                                                    `
-
-
-
-                                                        // TURN OFF LOADER ///////////
-                                                        // ///////////////////////////
-                                                        
-                                                            getLoaderBlockMain.style = `
-                            
-                                                                width:100%;
-                                                                height:100%;
-                                                                top:0;
-                                                                left:0;
-                                                                right:0;
-                                                                bottom:0;
-                                                                margin:auto;
-                                                                z-index:2;
-                                                                display:none;
-                                                                position:absolute;
-                                                                background:rgba(255, 255, 255, 0.5);
-                                                                backdrop-filter:blur(10px);
-                                                                transition:all 600ms ease;
-                                                                -o-transition:all 600ms ease;
-                                                                -ms-transition:all 600ms ease;
-                                                                -moz-transition:all 600ms ease;
-                                                                -webkit-transition:all 600ms ease;
-
-                                                            `
-
-
-                                            }, getRandomStaller )
-
-
-                                                // CLEAR STALLER .....................
-                                                // ...................................
-
-                                                    getRandomStaller = 0
-
-            }
-
-
-
-
-
-
-
-
-
-
-            
-
-            function runGeneralSearch () {
-
-                console.log("searching")
-
-                // CREATE RESULTS SECTION AND RELATED ELEMENTS =======================
-                // ///////////////////////////////////////////////////////////////////
-
-                    // GET LOADER CLOCK MAIN BLOCK VARIABLE --------------------------
-                    // ///////////////////////////////////////////////////////////////
-
-                        var getLoaderBlockMain = document.querySelector(".scriptedResultsMainSectionLoadingBlockerContainer")
-
-                        var getLoaderBlockInnerBlock = document.querySelector(".scriptedResultsMainSectionLoaderActual")
-
-
-                            var randomlySelectThinkingImage = makeLoadingResultsImage[(Math.floor(Math.random() * makeLoadingResultsImage.length))];
-
-
-
-
-
-
-
-
-
-                        
-
-                // CUSTOMIZE BUTTON BEHAVIOR =========================================
-                // ///////////////////////////////////////////////////////////////////
-
-                    // DISAPPEAR BUTTON IMMEDIATELY ==================================
-                    // ///////////////////////////////////////////////////////////////
-
-
-                        getSearchClickerDisplaySetting = "none"
-
-
-                        getSearchBarSearchButton.style = `
-                        
-                            width:100%;
-                            height:100%;
-                            top:0;
-                            left:0;
-                            right:0;
-                            bottom:0;
-                            z-index:1;
-                            margin:auto;
-                            cursor:pointer;
-                            opacity:0;
-                            display:${getSearchClickerDisplaySetting};
-                            background:#2c2c2c;
-                            position:absolute;
-                            transition:all 600ms ease;
-                            -o-transition:all 600ms ease;
-                            -ms-transition:all 600ms ease;
-                            -moz-transition:all 600ms ease;
-                            -webkit-transition:all 600ms ease;
-
-                        `
-
-                            // TURN ON LOADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                            // ///////////////////////////////////////////////////////
-                                
-                                                    
-                                getLoaderBlockMain.style = `
-
-                                    width:100%;
-                                    height:100%;
-                                    top:0;
-                                    left:0;
-                                    right:0;
-                                    bottom:0;
-                                    margin:auto;
-                                    z-index:2;
-                                    display:block;
-                                    position:fixed;
-                                    background:rgba(255, 255, 255, 0.5);
-                                    backdrop-filter:blur(10px);
-                                    transition:all 600ms ease;
-                                    -o-transition:all 600ms ease;
-                                    -ms-transition:all 600ms ease;
-                                    -moz-transition:all 600ms ease;
-                                    -webkit-transition:all 600ms ease;
-
-                                `
-
-                                getLoaderBlockInnerBlock.style = `
-                                
-                                    width:80%;
-                                    height:80%;
-                                    top:0;
-                                    left:0;
-                                    right:0;
-                                    bottom:0;
-                                    margin:auto;
-                                    background:url("${randomlySelectThinkingImage}");
-                                    background-size:cover;
-                                    background-repeat:no-repeat;
-                                    background-position:center;
-                                    position:absolute;
-                                    border-radius:8px;
-                                    transition:all 600ms ease;
-                                    -o-transition:all 600ms ease;
-                                    -ms-transition:all 600ms ease;
-                                    -moz-transition:all 600ms ease;
-                                    -webkit-transition:all 600ms ease;
-                                
-                                `
-
-
-
-                                    // BRING BACK AFTER SELECTED RANDOM TIMER SELECT =
-                                    // ///////////////////////////////////////////////
-
-                                        // SELECT RANDOM TIME STALLER ----------------
-                                        // ///////////////////////////////////////////
-
-                                            var getRandomStaller = makeLoadingResultsStallArray[(Math.floor(Math.random() * makeLoadingResultsStallArray.length))];
-
-                                            setTimeout(() => {
-
-                                                
-
-                                                    getSearchClickerDisplaySetting = "block"
-
-
-                                                    getSearchBarSearchButton.style = `
-                                
-                                                        width:100%;
-                                                        height:100%;
-                                                        top:0;
-                                                        left:0;
-                                                        right:0;
-                                                        bottom:0;
-                                                        z-index:1;
-                                                        margin:auto;
-                                                        cursor:pointer;
-                                                        opacity:0;
-                                                        display:${getSearchClickerDisplaySetting};
-                                                        background:#2c2c2c;
-                                                        position:absolute;
-                                                        transition:all 600ms ease;
-                                                        -o-transition:all 600ms ease;
-                                                        -ms-transition:all 600ms ease;
-                                                        -moz-transition:all 600ms ease;
-                                                        -webkit-transition:all 600ms ease;
-
-                                                    `
-
-
-
-                                                        // TURN OFF LOADER ///////////
-                                                        // ///////////////////////////
-                                                        
-                                                            getLoaderBlockMain.style = `
-                            
-                                                                width:100%;
-                                                                height:100%;
-                                                                top:0;
-                                                                left:0;
-                                                                right:0;
-                                                                bottom:0;
-                                                                margin:auto;
-                                                                z-index:2;
-                                                                display:none;
-                                                                position:absolute;
-                                                                background:rgba(255, 255, 255, 0.5);
-                                                                backdrop-filter:blur(10px);
-                                                                transition:all 600ms ease;
-                                                                -o-transition:all 600ms ease;
-                                                                -ms-transition:all 600ms ease;
-                                                                -moz-transition:all 600ms ease;
-                                                                -webkit-transition:all 600ms ease;
-
-                                                            `
-
-
-                                            }, getRandomStaller )
-
-
-                                                // CLEAR STALLER .....................
-                                                // ...................................
-
-                                                    getRandomStaller = 0
-
-            }
-
-
-
-
-
-
-
-
-
-    // FUNCTIONS FOR RESULTS SECTION -------------------------------------------------
+    // RUN FUNCTIONS FOR RESULTS SECTION ---------------------------------------------
     // ///////////////////////////////////////////////////////////////////////////////
 
         // BUILD RESULTS SECTION -----------------------------------------------------
