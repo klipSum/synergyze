@@ -86,7 +86,34 @@
                 "Six", "Seven", "Eight", "Nine", "Ten",
 
                 "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
-                "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"
+                "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty",
+
+                "TwentyOne", "TwentyTwo", "TwentyThree", "TwentyFour", "TwentyFive", 
+                "TwentySix", "TwentySeven", "TwentyEight", "TwentyNine", "Thirty",
+
+                "ThirtyOne", "ThirtyTwo", "ThirtyThree", "ThirtyFour", "ThirtyFive", 
+                "ThirtySix", "ThirtySeven", "ThirtyEight", "ThirtyNine", "Fourty",
+
+                "FourtyOne", "FourtyTwo", "FourtyThree", "FourtyFour", "FourtyFive", 
+                "FourtySix", "FourtySeven", "FourtyEight", "FourtyNine", "Fifty",
+
+
+
+
+                "FiftyOne", "FiftyTwo", "FiftyThree", "FiftyFour", "FiftyFive", 
+                "FiftySix", "FiftySeven", "FiftyEight", "FiftyNine", "Sixty",
+
+                "SixtyOne", "SixtyTwo", "SixtyThree", "SixtyFour", "SixtyFive", 
+                "SixtySix", "SixtySeven", "SixtyEight", "SixtyNine", "Seventy",
+
+                "SeventyOne", "SeventyTwo", "SeventyThree", "SeventyFour", "SeventyFive", 
+                "SeventySix", "SeventySeven", "SeventyEight", "SeventyNine", "Eighty",
+
+                "EightyOne", "EightyTwo", "EightyThree", "EightyFour", "EightyFive", 
+                "EightySix", "EightySeven", "EightyEight", "EightyNine", "Ninety",
+
+                "NinetyOne", "NinetyTwo", "NinetyThree", "NinetyFour", "NinetyFive", 
+                "NinetySix", "NinetySeven", "NinetyEight", "NinetyNine", "OneHundred"
 
             ]
 
@@ -106,18 +133,222 @@
                 "/images/responseImages/thinkingImages/thinkSeven.gif",
                 "/images/responseImages/thinkingImages/thinkEight.gif",
                 "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
+                "/images/responseImages/thinkingImages/thinkTen.gif",
+
+
+
+
+
+                "/images/responseImages/thinkingImages/thinkOne.gif",
+                "/images/responseImages/thinkingImages/thinkTwo.gif",
+                "/images/responseImages/thinkingImages/thinkThree.gif",
+                "/images/responseImages/thinkingImages/thinkFour.gif",
+                "/images/responseImages/thinkingImages/thinkFive.gif",
+
+                "/images/responseImages/thinkingImages/thinkSix.gif",
+                "/images/responseImages/thinkingImages/thinkSeven.gif",
+                "/images/responseImages/thinkingImages/thinkEight.gif",
+                "/images/responseImages/thinkingImages/thinkNine.gif",
                 "/images/responseImages/thinkingImages/thinkTen.gif"
             
             ]
 
             var makeResultsBoxImages = [
 
-                "One", "Two", "Three", "Four", "Five",
-                "Six", "Seven", "Eight", "Nine", "Ten"
+                "One", "Two", "Three", "Four", "Five", 
+                "Six", "Seven", "Eight", "Nine", "Ten",
+
+                "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+                "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty",
+
+                "TwentyOne", "TwentyTwo", "TwentyThree", "TwentyFour", "TwentyFive", 
+                "TwentySix", "TwentySeven", "TwentyEight", "TwentyNine", "Thirty",
+
+                "ThirtyOne", "ThirtyTwo", "ThirtyThree", "ThirtyFour", "ThirtyFive", 
+                "ThirtySix", "ThirtySeven", "ThirtyEight", "ThirtyNine", "Fourty",
+
+                "FourtyOne", "FourtyTwo", "FourtyThree", "FourtyFour", "FourtyFive", 
+                "FourtySix", "FourtySeven", "FourtyEight", "FourtyNine", "Fifty",
+
+
+
+
+                "FiftyOne", "FiftyTwo", "FiftyThree", "FiftyFour", "FiftyFive", 
+                "FiftySix", "FiftySeven", "FiftyEight", "FiftyNine", "Sixty",
+
+                "SixtyOne", "SixtyTwo", "SixtyThree", "SixtyFour", "SixtyFive", 
+                "SixtySix", "SixtySeven", "SixtyEight", "SixtyNine", "Seventy",
+
+                "SeventyOne", "SeventyTwo", "SeventyThree", "SeventyFour", "SeventyFive", 
+                "SeventySix", "SeventySeven", "SeventyEight", "SeventyNine", "Eighty",
+
+                "EightyOne", "EightyTwo", "EightyThree", "EightyFour", "EightyFive", 
+                "EightySix", "EightySeven", "EightyEight", "EightyNine", "Ninety",
+
+                "NinetyOne", "NinetyTwo", "NinetyThree", "NinetyFour", "NinetyFive", 
+                "NinetySix", "NinetySeven", "NinetyEight", "NinetyNine", "OneHundred"
 
             ]
 
             var makeResultsColorSelector = [
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+
+                
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F",
 
                 "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
                 "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F"
