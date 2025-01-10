@@ -1,6 +1,88 @@
 /* STYLE ELEMENTS ON PAGE =========================================================== */
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ////////////////////////////////////////////////////////////////////////////// */
+    /* HOVER EFFECTS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* ////////////////////////////////////////////////////////////////////////////// */
+
+        /* HOVER EFFECTS FOR RESULTS CARD =========================================== */
+        /* ////////////////////////////////////////////////////////////////////////// */
+
+            .scriptedResultsCorrectAsnwerCardActualCard:hover{
+
+                width:100%;
+                left:0px;
+                right:0px;
+                margin:0px auto;
+                padding:20px 0px;
+                position:relative;
+                transform:translateY(-3px);
+                background:#FFFFFF;
+                box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.5);
+                border-radius:10px;
+                transition:all 600ms ease;
+                -o-transition:all 600ms ease;
+                -ms-transition:all 600ms ease;
+                -moz-transition:all 600ms ease;
+                -webkit-transition:all 600ms ease;
+
+            }
+
+                .scriptedResultsCorrectAsnwerCardActualCard:hover .scriptedResultsCorrectAsnwerCardActualGoButtonActualContainer{
+
+                    width:100%;
+                    height:40px;
+                    position:relative;
+                    background:#2d3d4c;
+                    border-radius:1000px;
+                    transform:translateX(3px);
+                    transition:all 600ms ease;
+                    -o-transition:all 600ms ease;
+                    -ms-transition:all 600ms ease;
+                    -moz-transition:all 600ms ease;
+                    -webkit-transition:all 600ms ease;
+
+                }
+
+
+
+
+
+
+    /* ////////////////////////////////////////////////////////////////////////////// */
+    /* HOVER EFFECTS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* ////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ELEMENTS FOR MAIN PAGE ------------------------------------------------------- */
     /* ////////////////////////////////////////////////////////////////////////////// */
 
@@ -36,6 +118,113 @@
 
             }
 
+
+
+
+
+
+
+
+
+
+                /* SCRIPTED LOADING ELEMENTS CONTAINER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+                /* /////////////////////////////////////////////////////////////////// */
+
+                    .scriptedLoadingScreenContainer{
+
+                        width:100%;
+                        height:100%;
+                        z-index:2;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        display:none;
+                        position:fixed;
+                        background:rgba(255, 255, 255, 0.5);
+                        backdrop-filter:blur(10px);
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedLoadingScreenContentResizer{
+
+                            width:80%;
+                            height:80%;
+                            top:0;
+                            left:0;
+                            right:0;
+                            bottom:0;
+                            margin:auto;
+                            position:absolute;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+
+                            /* LOADER IMAGE BLOCK =================================== */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedLoadingScreenContentLoadBoxImageContainer{
+
+                                    width:100px;
+                                    height:100px;
+                                    top:0;
+                                    left:0;
+                                    right:0;
+                                    bottom:0;
+                                    margin:auto;
+                                    position:absolute;
+                                    background:#FFFFFF;
+                                    box-shadow:0px 30px 30px -10px rgba(0, 0, 0, 0.3);
+                                    border-radius:1000px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedLoadingScreenContentLoadBoxImageActual{
+
+                                        width:80%;
+                                        height:80%;
+                                        top:0;
+                                        left:0;
+                                        right:0;
+                                        bottom:0;
+                                        margin:auto;
+                                        position:absolute;
+                                        background:url("/images/responseImages/thinkingImages/thinkOne.gif");
+                                        border-radius:1000px;
+                                        background-size:cover;
+                                        background-repeat:center;
+                                        background-position:center;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
+
+
+
+
+
+
                 
 
     /* ELEMENTS FOR NAV BAR SECTION ------------------------------------------------- */
@@ -68,12 +257,23 @@
             }
 
 
+
+
+
+
+
+
+
+
+
+
                 /* SEARCH BAR HEADER AND SUB HEADER CONTAINER xxxxxxxxxxxxxxxxxxxxxxx */
                 /* ////////////////////////////////////////////////////////////////// */
 
                     .scriptedMainElementsHeaderSubHeaderContainer{
 
                         width:100%;
+                        position:relative;
                         transition:all 600ms ease;
                         -o-transition:all 600ms ease;
                         -ms-transition:all 600ms ease;
@@ -177,6 +377,7 @@
                             .scriptedMainSearchElementContainer{
 
                                 width:100%;
+                                position:relative;
                                 transition:all 600ms ease;
                                 -o-transition:all 600ms ease;
                                 -ms-transition:all 600ms ease;
@@ -266,10 +467,10 @@
 
                                         .scriptedMainSearchElementSearchBarButtonSideElementContainer{
 
-                                            /* width:50%; */
                                             left:0px;
                                             right:0px;
                                             margin:0px auto;
+                                            opacity:0.1;
                                             padding:20px 40px;
                                             display:inline-block;
                                             position:relative;
@@ -308,7 +509,7 @@
                                                         margin:auto;
                                                         cursor:pointer;
                                                         opacity:0;
-                                                        display:block;
+                                                        display:none;
                                                         position:absolute;
                                                         background:#2c2c2c;
                                                         transition:all 600ms ease;
@@ -324,11 +525,567 @@
 
                                                     }
 
-                                            /* CLICKER CONTAINER //////////////////// */
-                                            /* ////////////////////////////////////// */
 
 
 
-    /* ELEMENTS FOR RESULTS SECTION ------------------------------------------------- */
+
+
+
+
+
+
+
+
+                /* SEARCH BAR FOOTER ELEMENT CONTAINER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+                /* ////////////////////////////////////////////////////////////////// */
+
+                    .scriptedMainFooterElementContainer{
+
+                        width:100%;
+                        left:0px;
+                        right:0px;
+                        margin:20px 0px 0px 0px;
+                        position:relative;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+                        
+                    }
+
+                        .scriptedMainFooterElementResizer{
+
+                            width:80%;
+                            left:0px;
+                            right:0px;
+                            margin:0px auto;
+                            padding:10px 0px;
+                            position:relative;
+                            background:#FFFFFF;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+                    
+
+
+
+    /* SEARCH RESULTS CONTAINER GOES HERE ------------------------------------------- */
     /* ////////////////////////////////////////////////////////////////////////////// */
+
+        .scriptedResultsContainerMain{
+
+            width:100%;
+            z-index:0;
+            padding:50px 0px;
+            opacity:1;
+            display:inline-block;
+            position:relative;
+            transform:translateY(0px);
+            margin-top:30px;
+            background:#58d8d9;
+            box-shadow:0px 10px 50px -20px rgba(0, 0, 0, 0.2);
+            margin-bottom:50px;
+            border-radius:10px;
+            transition:all 600ms ease;
+            -o-transition:all 600ms ease;
+            -ms-transition:all 600ms ease;
+            -moz-transition:all 600ms ease;
+            -webkit-transition:all 600ms ease;
+
+        }
+
+            .scriptedResultsContainerResizer{
+
+                width:80%;
+                left:0px;
+                right:0px;
+                margin:0px auto;
+                position:relative;
+                transition:all 600ms ease;
+                -o-transition:all 600ms ease;
+                -ms-transition:all 600ms ease;
+                -moz-transition:all 600ms ease;
+                -webkit-transition:all 600ms ease;
+
+            }
+
+
+
+
+                /* MOST RELEVANT ANSWER HEADER CONTAINER ============================ */
+                /* ////////////////////////////////////////////////////////////////// */
+
+                    .scriptedResultsRelevantHeaderTextContainer{
+
+                        width:100%;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedResultsRelevantHeaderTextActual{
+
+                            text-align:left;
+                            font-size:14px;
+                            font-weight:800;
+                            font-family:arial, sans-serif;
+                            letter-spacing:1px;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+
+
+
+                /* SPLURB BODY TEXT CONTAINER ======================================= */
+                /* ////////////////////////////////////////////////////////////////// */
+
+                    .scriptedResultsSplurbBodyTextContainer{
+
+                        width:100%;
+                        margin-top:20px;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedResultsSplurbBodyTextActual{
+
+                            width:100%;
+                            font-size:12px;
+                            text-align:left;
+                            line-height:20px;
+                            font-family:arial, sans-serif;
+                            letter-spacing:1px;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+
+
+
+                /* CORRECT ANSWER CARD CONTAINER ==================================== */
+                /* ////////////////////////////////////////////////////////////////// */
+
+                    .scriptedResultsCorrectAsnwerCardContainer{
+
+                        width:100%;
+                        display:block;
+                        opacity:1;
+                        transform:translateY(0px);
+                        margin-top:30px;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedResultsCorrectAsnwerCardActualCard{
+
+                            width:100%;
+                            left:0px;
+                            right:0px;
+                            cursor:pointer;
+                            margin:0px auto;
+                            padding:20px 0px;
+                            position:relative;
+                            transform:translateX(0px);
+                            background:#FFFFFF;
+                            box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.5);
+                            border-radius:10px;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+
+
+                            /* CORRECT ANSWER CARD ANSWER HEADER -------------------- */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedResultsCorrectAsnwerCardActualHeaderContainer{
+
+                                    width:90%;
+                                    left:0px;
+                                    right:0px;
+                                    margin:0px auto;
+                                    position:relative;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedResultsCorrectAsnwerCardActualHeaderActual{
+
+                                        display:block;
+                                        font-size:14px;
+                                        text-align:left;
+                                        font-weight:800;
+                                        font-family:arial, sans-serif;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
+                            /* CORRECT ANSWER CARD IMAGE CONTAINER ------------------ */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedResultsCorrectAsnwerCardActualImageContainer{
+
+                                    width:90%;
+                                    left:0;
+                                    right:0;
+                                    display:inline-block;
+                                    position:relative;
+                                    margin-top:20px;
+                                    box-shadow:0px 30px 30px -10px rgba(0, 0, 0, 0.5);
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedResultsCorrectAsnwerCardActualImageActual{
+
+                                        width:100%;
+                                        height:100px;
+                                        background:url("/images/resultsImages/resultTwo.jpg");
+                                        border-radius:8px;
+                                        background-size:cover;
+                                        background-repeat:no-repeat;
+                                        background-position:center;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
+                            /* CORRECT ANSWER CARD DESCRIPTION ---------------------- */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedResultsCorrectAsnwerCardActualDescriptionContainer{
+
+                                    width:100%;
+                                    display:block;
+                                    margin-top:20px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedResultsCorrectAsnwerCardActualDescriptionActual{
+                                        
+                                        width:90%;
+                                        left:0px;
+                                        right:0px;
+                                        margin:0px auto;
+                                        position:relative;
+                                        font-size:12px;
+                                        text-align:left;
+                                        line-height:20px;
+                                        font-family:arial, sans-serif;
+                                        letter-spacing:1px;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
+                            /* CORRECT ANSWER CARD GO BUTTON CONTAINER -------------- */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedResultsCorrectAsnwerCardActualGoButtonContainer{
+
+                                    width:90%;
+                                    height:40px;
+                                    display:inline-block;
+                                    margin-top:20px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+
+
+
+                                    /* GO BUTTON TEXT SIDE xxxxxxxxxxxxxxxxxxxxxxxxxx */
+                                    /* ////////////////////////////////////////////// */
+
+                                        .scriptedResultsCorrectAsnwerCardActualGoButtonTextSideContainer{
+
+                                            width:86%;
+                                            height:40px;
+                                            float:left;
+                                            transition:all 600ms ease;
+                                            -o-transition:all 600ms ease;
+                                            -ms-transition:all 600ms ease;
+                                            -moz-transition:all 600ms ease;
+                                            -webkit-transition:all 600ms ease;
+
+                                        }
+
+                                            .scriptedResultsCorrectAsnwerCardActualGoButtonTextSideTextActual{
+
+                                                color:rgba(0, 0, 0, 0.4);
+                                                font-size:16px;
+                                                text-align:left;
+                                                line-height:40px;
+                                                font-family:arial, sans-serif;
+                                                letter-spacing:2px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+
+                                
+
+                                    /* GO BUTTON ACTUAL BUTTON SIDE xxxxxxxxxxxxxxxxx */
+                                    /* ////////////////////////////////////////////// */
+
+                                        .scriptedResultsCorrectAsnwerCardActualGoButtonSideContainer{
+
+                                            width:14%;
+                                            height:40px;
+                                            float:right;
+                                            transition:all 600ms ease;
+                                            -o-transition:all 600ms ease;
+                                            -ms-transition:all 600ms ease;
+                                            -moz-transition:all 600ms ease;
+                                            -webkit-transition:all 600ms ease;
+
+                                        }
+
+                                            .scriptedResultsCorrectAsnwerCardActualGoButtonActualContainer{
+
+                                                width:100%;
+                                                height:40px;
+                                                position:relative;
+                                                background:#2d3d4c;
+                                                border-radius:1000px;
+                                                transform:translateX(0px);
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+                                                /* ICON CONTAINER >>>>>>>>>>>>>>>>>>> */
+                                                /* ////////////////////////////////// */
+
+                                                    .scriptedResultsCorrectAsnwerCardActualGoButtonIconContainer{
+
+                                                        width:20px;
+                                                        height:20px;
+                                                        top:0;
+                                                        left:0;
+                                                        right:0;
+                                                        bottom:0;
+                                                        margin:auto;
+                                                        position:absolute;
+                                                        transition:all 600ms ease;
+                                                        -o-transition:all 600ms ease;
+                                                        -ms-transition:all 600ms ease;
+                                                        -moz-transition:all 600ms ease;
+                                                        -webkit-transition:all 600ms ease;
+
+                                                    }
+
+                                                        .scriptedResultsCorrectAsnwerCardActualGoButtonIconLineOne{
+
+                                                            width:50%;
+                                                            height:3px;
+                                                            top:-5px;
+                                                            left:9px;
+                                                            right:0;
+                                                            bottom:0;
+                                                            margin:auto;
+                                                            position:absolute;
+                                                            transform:rotateZ(45deg);
+                                                            background:#FFFFFF;
+                                                            border-radius:1000px;
+                                                            transition:all 600ms ease;
+                                                            -o-transition:all 600ms ease;
+                                                            -ms-transition:all 600ms ease;
+                                                            -moz-transition:all 600ms ease;
+                                                            -webkit-transition:all 600ms ease;
+
+                                                        }
+
+                                                        .scriptedResultsCorrectAsnwerCardActualGoButtonIconLineTwo{
+
+                                                            width:70%;
+                                                            height:3px;
+                                                            top:0;
+                                                            left:0;
+                                                            right:0;
+                                                            bottom:0;
+                                                            margin:auto;
+                                                            position:absolute;
+                                                            transform:rotateZ(0deg);
+                                                            background:#FFFFFF;
+                                                            border-radius:1000px;
+                                                            transition:all 600ms ease;
+                                                            -o-transition:all 600ms ease;
+                                                            -ms-transition:all 600ms ease;
+                                                            -moz-transition:all 600ms ease;
+                                                            -webkit-transition:all 600ms ease;
+
+                                                        }
+
+                                                        .scriptedResultsCorrectAsnwerCardActualGoButtonIconLineThree{
+
+                                                            width:50%;
+                                                            height:3px;
+                                                            top:7px;
+                                                            left:9px;
+                                                            right:0;
+                                                            bottom:0;
+                                                            margin:auto;
+                                                            position:absolute;
+                                                            transform:rotateZ(-45deg);
+                                                            background:#FFFFFF;
+                                                            border-radius:1000px;
+                                                            transition:all 600ms ease;
+                                                            -o-transition:all 600ms ease;
+                                                            -ms-transition:all 600ms ease;
+                                                            -moz-transition:all 600ms ease;
+                                                            -webkit-transition:all 600ms ease;
+
+                                                        }
+
+
+
+
+                /* UNKOWN ANSWER CARD CONTAINER ===================================== */
+                /* ////////////////////////////////////////////////////////////////// */
+
+                    .scriptedResultsUnkownAsnwerCardContainer{
+
+                        width:100%;
+                        display:none;
+                        opacity:0;
+                        transform:translateY(30px);
+                        margin-top:30px;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedResultsUnkownAsnwerCardActualCard{
+
+                            width:100%;
+                            left:0px;
+                            right:0px;
+                            margin:0px auto;
+                            padding:20px 0px;
+                            position:relative;
+                            transform:translateX(0px);
+                            background:#FFFFFF;
+                            box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.5);
+                            border-radius:10px;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+                            /* UNKOWN ANSWER CARD IMAGE CONTAINER /////////////////// */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedResultsUnkownAsnwerCardActualImageContainer{
+
+                                    width:90%;
+                                    left:0;
+                                    right:0;
+                                    display:inline-block;
+                                    position:relative;
+                                    margin-top:0px;
+                                    box-shadow:0px 30px 30px -10px rgba(0, 0, 0, 0.5);
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedResultsUnkownAsnwerCardActualImageActual{
+
+                                        width:100%;
+                                        height:150px;
+                                        background:url("/images/resultsImages/resultUnknown.jpg");
+                                        border-radius:8px;
+                                        background-size:cover;
+                                        background-repeat:no-repeat;
+                                        background-position:center;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
 
