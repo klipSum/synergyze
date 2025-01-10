@@ -584,11 +584,11 @@
             z-index:0;
             padding:50px 0px;
             opacity:1;
-            display:inline-block;
+            display:none;
             position:relative;
             transform:translateY(0px);
             margin-top:30px;
-            background:#58d8d9;
+            background:#8ed9d9;
             box-shadow:0px 10px 50px -20px rgba(0, 0, 0, 0.2);
             margin-bottom:50px;
             border-radius:10px;
@@ -745,11 +745,13 @@
 
                                     .scriptedResultsCorrectAsnwerCardActualHeaderActual{
 
+                                        width:70%;
                                         display:block;
                                         font-size:14px;
                                         text-align:left;
                                         font-weight:800;
                                         font-family:arial, sans-serif;
+                                        letter-spacing:1px;
                                         transition:all 600ms ease;
                                         -o-transition:all 600ms ease;
                                         -ms-transition:all 600ms ease;
@@ -772,6 +774,7 @@
                                     position:relative;
                                     margin-top:20px;
                                     box-shadow:0px 30px 30px -10px rgba(0, 0, 0, 0.5);
+                                    border-radius:8px;
                                     transition:all 600ms ease;
                                     -o-transition:all 600ms ease;
                                     -ms-transition:all 600ms ease;
@@ -1007,6 +1010,33 @@
                                                             -webkit-transition:all 600ms ease;
 
                                                         }
+
+
+
+                            /* CORRECT ANSWER CARD LINK CLICKER --------------------- */
+                            /* ////////////////////////////////////////////////////// */
+                                                        
+                                .scriptedResultsCardClickerDefault{
+
+                                    width:100%;
+                                    height:100%;
+                                    top:0px;
+                                    left:0px;
+                                    right:0px;
+                                    bottom:0px;
+                                    margin:0px auto;
+                                    opacity:1;
+                                    z-index:1;
+                                    position:absolute;
+                                    background:#2C2C2C;
+                                    border-radius:10px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
 
 
 

@@ -33,6 +33,8 @@
 
             var getResultsCardMainContainer = document.querySelector(".scriptedResultsCorrectAsnwerCardContainer")
 
+                var getCardActual = document.querySelector(".scriptedResultsCorrectAsnwerCardActualCard")
+
             var getResultsUnkownCardBlock = document.querySelector(".scriptedResultsUnkownAsnwerCardContainer")
 
 
@@ -69,6 +71,7 @@
         // ///////////////////////////////////////////////////////////////////////////
 
             var makeLoadingResultsStallArray = [500, 1000, 2000, 5000]
+            var collectDescriptions = []
             var collectQuestions = []
             var collectAnswers = []
             var collectSlogan = []
@@ -111,6 +114,13 @@
 
                 "One", "Two", "Three", "Four", "Five",
                 "Six", "Seven", "Eight", "Nine", "Ten"
+
+            ]
+
+            var makeResultsColorSelector = [
+
+                "#2C2C2C", "#D97272", "#72A9D9", "#72D9A6", "#D9A272",
+                "#7472D9", "#D972D0", "#D7D972", "#9F324A", "#80329F"
 
             ]
 
@@ -242,6 +252,7 @@
                             // RUN OTHER COLLECTS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                             // ///////////////////////////////////////////////////////
 
+                                getDescriptions()
                                 getAnswers()
                                 getSlogan()
                                 getLinks()
@@ -249,6 +260,44 @@
                             
 
                 }
+
+
+
+                
+
+
+
+
+                // COLLECT DESCRIPTIONS ==============================================
+                // ///////////////////////////////////////////////////////////////////
+
+                    function getDescriptions () {
+
+                        // RETRIEVE CONTENTS AND STORE IN LOCAL MEMORY ...................
+                        // ...............................................................
+    
+                            fetch("/dox/descriptions.txt")
+                            .then(res => res.text())
+                            .then((text) => {
+
+                                var getString = text
+
+                                var splitString = getString.split(",")
+
+
+                                for (pushCounter = 0; pushCounter < splitString.length; pushCounter ++) {
+
+                                    collectDescriptions.push(`${splitString[pushCounter].toLowerCase()}`)
+
+                                    console.log("DESCRIPTIONS COLLECTED: " + collectDescriptions[pushCounter])
+
+                                }
+                                
+                            
+                            })
+
+
+                    }
 
 
 
@@ -745,116 +794,39 @@
 
             function checkInputForCorrelation () {
 
-                // RUN LOOP TO CHECK WHICH QUESTIONS MATCH WITH INPUT >>>>>>>>>>>>>>>
+
+                var getSelectedAnswer = -1
+
+
+                // MINI FUNCTIONS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                 // //////////////////////////////////////////////////////////////////
 
-                    for ( questionCounter = 0; questionCounter < collectQuestions.length; questionCounter++ ) {
+                    // WHEN ANSWER IS FOUND .........................................
+                    // //////////////////////////////////////////////////////////////
+
+                        function whenAnswerIsFound (elementSelector) {
 
 
+                            // PREP MAIN RELEVANT ANSWER BLOCK AND SHOW BLOCK ===
+                            // //////////////////////////////////////////////////
 
-                        console.log("QUESTION ASKED: " + collectQuestions[questionCounter])
-                        console.log("WHAT DID I SAY: " + getInputElement.value)
+                                // BRING TO LIFE FIRST --------------------------
+                                // //////////////////////////////////////////////
 
-
-                        // CHECK IF QUESTIONS SHOW UP IN MATCH ......................
-                        // //////////////////////////////////////////////////////////
-
-                            if ( 
-                                
-                                    collectQuestions[questionCounter].includes(`${getInputElement.value.toLowerCase()}`) || 
-                                    collectQuestions[questionCounter] == `${getInputElement.value.toLowerCase()}` 
-                                
-                                ) 
-                                
-                            {
-
-
-                                // PREP MAIN RELEVANT ANSWER BLOCK AND SHOW BLOCK ===
-                                // //////////////////////////////////////////////////
-
-                                    // BRING TO LIFE FIRST --------------------------
-                                    // //////////////////////////////////////////////
-
-                                        getResultsMainContainerBlock.style = `
-                                        
-                                            width:100%;
-                                            z-index:0;
-                                            padding:50px 0px;
-                                            opacity:0;
-                                            display:inline-block;
-                                            position:relative;
-                                            transform:translateY(70px);
-                                            margin-top:30px;
-                                            background:#58d8d9;
-                                            box-shadow:0px 10px 50px -20px rgba(0, 0, 0, 0.2);
-                                            margin-bottom:50px;
-                                            border-radius:10px;
-                                            transition:all 600ms ease;
-                                            -o-transition:all 600ms ease;
-                                            -ms-transition:all 600ms ease;
-                                            -moz-transition:all 600ms ease;
-                                            -webkit-transition:all 600ms ease;
-
-                                        `
-
-                                            // THEN FADE IN TO PLACE ////////////////
-                                            // //////////////////////////////////////
-
-                                                setTimeout(() => {
-
-                                                    getResultsMainContainerBlock.style = `
-                                        
-                                                        width:100%;
-                                                        z-index:0;
-                                                        padding:50px 0px;
-                                                        opacity:1;
-                                                        display:inline-block;
-                                                        position:relative;
-                                                        transform:translateY(0px);
-                                                        margin-top:30px;
-                                                        background:#58d8d9;
-                                                        box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.2);
-                                                        margin-bottom:50px;
-                                                        border-radius:10px;
-                                                        transition:all 600ms ease;
-                                                        -o-transition:all 600ms ease;
-                                                        -ms-transition:all 600ms ease;
-                                                        -moz-transition:all 600ms ease;
-                                                        -webkit-transition:all 600ms ease;
-
-                                                    `
-
-                                                },200)
-
-
-
-
-
-
-
-                                // PREP CORRECT ANSWER SPLURB TEXT BLOCK AND SHOW BLOCK
-                                // //////////////////////////////////////////////////
-
-                                    var getRandomAnswerRemark = makeResultsBlurb[(Math.floor(Math.random() * makeResultsBlurb.length))];
-
-                                    getResultsSplurbBodyText.textContent = `${getRandomAnswerRemark}`
-
-
-
-
-
-
-
-                                // PREP CORRECT ANSWER CARD BLOCK AND SHOW BLOCK ----
-                                // //////////////////////////////////////////////////
-
-                                    getResultsCardMainContainer.style = `
+                                    getResultsMainContainerBlock.style = `
                                     
                                         width:100%;
-                                        display:block;
+                                        z-index:0;
+                                        padding:50px 0px;
                                         opacity:0;
-                                        transform:translateY(30px);
+                                        display:inline-block;
+                                        position:relative;
+                                        transform:translateY(70px);
                                         margin-top:30px;
+                                        background:#8ed9d9;
+                                        box-shadow:0px 10px 50px -20px rgba(0, 0, 0, 0.2);
+                                        margin-bottom:50px;
+                                        border-radius:10px;
                                         transition:all 600ms ease;
                                         -o-transition:all 600ms ease;
                                         -ms-transition:all 600ms ease;
@@ -863,11 +835,413 @@
 
                                     `
 
-                                        // THEN FADE IN /////////////////////////////
-                                        // //////////////////////////////////////////
+                                        // THEN FADE IN TO PLACE ////////////////
+                                        // //////////////////////////////////////
+
+                                            setTimeout(() => {
+
+                                                getResultsMainContainerBlock.style = `
+                                    
+                                                    width:100%;
+                                                    z-index:0;
+                                                    padding:50px 0px;
+                                                    opacity:1;
+                                                    display:inline-block;
+                                                    position:relative;
+                                                    transform:translateY(0px);
+                                                    margin-top:30px;
+                                                    background:#8ed9d9;
+                                                    box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.2);
+                                                    margin-bottom:50px;
+                                                    border-radius:10px;
+                                                    transition:all 600ms ease;
+                                                    -o-transition:all 600ms ease;
+                                                    -ms-transition:all 600ms ease;
+                                                    -moz-transition:all 600ms ease;
+                                                    -webkit-transition:all 600ms ease;
+
+                                                `
+
+                                            },200)
+
+
+
+
+
+
+
+                            // PREP CORRECT ANSWER SPLURB TEXT BLOCK AND SHOW BLOCK
+                            // //////////////////////////////////////////////////
+
+                                var getRandomAnswerRemark = makeResultsBlurb[(Math.floor(Math.random() * makeResultsBlurb.length))];
+
+                                getResultsSplurbBodyText.textContent = `${getRandomAnswerRemark}`
+
+
+
+
+
+
+
+                            // PREP CORRECT ANSWER CARD BLOCK AND SHOW BLOCK ----
+                            // //////////////////////////////////////////////////
+
+                                getResultsCardMainContainer.style = `
+                                
+                                    width:100%;
+                                    display:block;
+                                    opacity:0;
+                                    transform:translateY(30px);
+                                    margin-top:30px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                `
+
+                                    // THEN FADE IN /////////////////////////////
+                                    // //////////////////////////////////////////
+
+                                        getResultsCardMainContainer.style = `
+                                
+                                            width:100%;
+                                            display:block;
+                                            opacity:1;
+                                            transform:translateY(0px);
+                                            margin-top:30px;
+                                            transition:all 600ms ease;
+                                            -o-transition:all 600ms ease;
+                                            -ms-transition:all 600ms ease;
+                                            -moz-transition:all 600ms ease;
+                                            -webkit-transition:all 600ms ease;
+
+                                        `
+
+
+
+
+
+
+
+                                            // UPDATE CARD HEADLINE =============
+                                            // //////////////////////////////////
+
+                                                var getCardHeadline = document.querySelector(".scriptedResultsCorrectAsnwerCardActualHeaderActual")
+
+                                                getCardHeadline.textContent = `${collectAnswers[elementSelector]}`
+
+
+
+
+
+
+
+                                            // UPDATE CARD DISPLAY IMAGE ========
+                                            // //////////////////////////////////
+
+                                                var getCardDisplayImage = document.querySelector(".scriptedResultsCorrectAsnwerCardActualImageActual")
+
+                                                getCardDisplayImage.style = `
+                                                
+                                                    width:100%;
+                                                    height:100px;
+                                                    background:url("/images/resultsImages/result${makeResultsBoxImages[elementSelector]}.jpg");
+                                                    border-radius:8px;
+                                                    background-size:cover;
+                                                    background-repeat:no-repeat;
+                                                    background-position:center;
+                                                    transition:all 600ms ease;
+                                                    -o-transition:all 600ms ease;
+                                                    -ms-transition:all 600ms ease;
+                                                    -moz-transition:all 600ms ease;
+                                                    -webkit-transition:all 600ms ease;
+
+                                                `
+
+
+
+
+
+
+                                            // UPDATE CARD BODY TEXT ============
+                                            // //////////////////////////////////
+
+                                                var getCardBodyText = document.querySelector(".scriptedResultsCorrectAsnwerCardActualDescriptionActual")
+
+                                                getCardBodyText.textContent = `${collectDescriptions[elementSelector]}`
+
+
+
+
+
+
+
+                                            // CREATE NEW CLICKER BLOCK =========
+                                            // //////////////////////////////////
+
+                                                // FIRST REMOVE PREVIOUS CLICKER
+                                                // /////////////////////////////
+
+                                                    getCardActual.removeChild(getCardActual.children[4])
+
+                                                // THEN ADD NEW CLICKER FOR CORRECT ANSWER
+                                                // /////////////////////////////
+
+                                                    var createNewClicker = document.createElement("div")
+                                                    createNewClicker.className = `scriptedResultsCardClicker${makeClassNumberStrings[elementSelector]}`
+
+                                                        // STYLE THE CLICKER BLOCK
+                                                        // ////////////////////
+
+                                                            createNewClicker.style = `
+                                                            
+                                                                width:100%;
+                                                                height:100%;
+                                                                top:0px;
+                                                                left:0px;
+                                                                right:0px;
+                                                                bottom:0px;
+                                                                margin:0px auto;
+                                                                opacity:0;
+                                                                z-index:1;
+                                                                position:absolute;
+                                                                background:${makeResultsColorSelector[elementSelector]};
+                                                                border-radius:10px;
+                                                                transition:all 600ms ease;
+                                                                -o-transition:all 600ms ease;
+                                                                -ms-transition:all 600ms ease;
+                                                                -moz-transition:all 600ms ease;
+                                                                -webkit-transition:all 600ms ease;
+
+                                                            `
+
+                                                        // ADD EVENT LISTENER TO CLICKER BLOCK
+                                                        // ////////////////////
+
+                                                            createNewClicker.addEventListener("click", function (){
+
+                                                                window.open(`${collectLinks[elementSelector]}`, `_blank`)
+
+                                                            })
+
+                                                        // ADD NEW CLICKER TO CARD
+                                                        // ////////////////////
+
+                                                            getCardActual.appendChild(createNewClicker)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            // SWITCH OFF UNKOWN CARD BLOCK ---------------------
+                            // //////////////////////////////////////////////////
+
+                                getResultsUnkownCardBlock.style = `
+                                    
+                                    width:100%;
+                                    display:block;
+                                    opacity:0;
+                                    transform:translateY(30px);
+                                    margin-top:30px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                `
+
+                                    // THEN FADE IN /////////////////////////////
+                                    // //////////////////////////////////////////
+
+                                        setTimeout(() => {
+
+                                            getResultsUnkownCardBlock.style = `
+                                
+                                                width:100%;
+                                                display:none;
+                                                opacity:0;
+                                                transform:translateY(30px);
+                                                margin-top:30px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            `
+
+                                        }, 300)
+
+
+
+                        }
+
+
+
+
+
+
+                    // WHEN ANSWER IS NOT FOUND .....................................
+                    // //////////////////////////////////////////////////////////////
+
+                        function whenAnswerIsNotFound () {
+
+
+                            // PREP MAIN RELEVANT ANSWER BLOCK AND SHOW BLOCK ===
+                            // //////////////////////////////////////////////////
+
+                                // BRING TO LIFE FIRST --------------------------
+                                // //////////////////////////////////////////////
+
+                                    getResultsMainContainerBlock.style = `
+                                    
+                                        width:100%;
+                                        z-index:0;
+                                        padding:50px 0px;
+                                        opacity:0;
+                                        display:inline-block;
+                                        position:relative;
+                                        transform:translateY(70px);
+                                        margin-top:30px;
+                                        background:#8ed9d9;
+                                        box-shadow:0px 10px 50px -20px rgba(0, 0, 0, 0.2);
+                                        margin-bottom:50px;
+                                        border-radius:10px;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    `
+
+                                        // THEN FADE IN TO PLACE ////////////////
+                                        // //////////////////////////////////////
+
+                                            setTimeout(() => {
+
+                                                getResultsMainContainerBlock.style = `
+                                    
+                                                    width:100%;
+                                                    z-index:0;
+                                                    padding:50px 0px;
+                                                    opacity:1;
+                                                    display:inline-block;
+                                                    position:relative;
+                                                    transform:translateY(0px);
+                                                    margin-top:30px;
+                                                    background:#8ed9d9;
+                                                    box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.2);
+                                                    margin-bottom:50px;
+                                                    border-radius:10px;
+                                                    transition:all 600ms ease;
+                                                    -o-transition:all 600ms ease;
+                                                    -ms-transition:all 600ms ease;
+                                                    -moz-transition:all 600ms ease;
+                                                    -webkit-transition:all 600ms ease;
+
+                                                `
+
+                                            },200)
+
+
+
+                            // CHANGE SPLURB FIRST LINE BODY TEXT TO NOT KNOWN --
+                            // //////////////////////////////////////////////////
+
+                                var getRandomUnkownResponse = makeUnkownResultsBlurb[(Math.floor(Math.random() * makeUnkownResultsBlurb.length))]
+
+                                getResultsSplurbBodyText.textContent = `${getRandomUnkownResponse}`
+
+
+
+
+
+
+
+                            // CHANGE RESULTS CORRECT ANSWER CARD TO NOT KNOWN --
+                            // //////////////////////////////////////////////////
+
+                                getResultsCardMainContainer.style = `
+                                
+                                    width:100%;
+                                    display:block;
+                                    opacity:0;
+                                    transform:translateY(30px);
+                                    margin-top:30px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                `
+
+                                    // THEN FADE OUT ////////////////////////////
+                                    // //////////////////////////////////////////
+
+                                        setTimeout(() => {
 
                                             getResultsCardMainContainer.style = `
-                                    
+                                        
+                                                width:100%;
+                                                display:none;
+                                                opacity:0;
+                                                transform:translateY(30px);
+                                                margin-top:30px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            `
+
+                                        }, 300)
+
+
+
+
+
+                                
+
+                            // SWITCH ON UNKOWN CARD BLOCK ----------------------
+                            // //////////////////////////////////////////////////
+
+                                getResultsUnkownCardBlock.style = `
+                                
+                                    width:100%;
+                                    display:block;
+                                    opacity:0;
+                                    transform:translateY(30px);
+                                    margin-top:30px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                `
+
+                                    // THEN FADE IN /////////////////////////////
+                                    // //////////////////////////////////////////
+
+                                        setTimeout(() => {
+
+                                            getResultsUnkownCardBlock.style = `
+                                
                                                 width:100%;
                                                 display:block;
                                                 opacity:1;
@@ -881,122 +1255,86 @@
 
                                             `
 
+                                        }, 300)
 
 
 
-                            }
+                        }
 
 
-                        // IF QUESTIONS DONT MATCH THEN NEW QUESTION ................
+
+
+
+
+
+
+
+                // RUN LOOP TO CHECK WHICH QUESTIONS MATCH WITH INPUT >>>>>>>>>>>>>>>
+                // //////////////////////////////////////////////////////////////////
+
+
+                    collectQuestions.forEach( mixer => {
+
+
+                        // CHECK IF QUESTIONS SHOW UP IN MATCH ......................
                         // //////////////////////////////////////////////////////////
 
-                            else {
+                            if ( 
+                                
+                                    `${mixer.toLowerCase()}`.includes(`${getInputElement.value.toLowerCase()}`) || 
+                                    `${mixer.toLowerCase()}` == `${getInputElement.value.toLowerCase()}`
+                                
+                                ) 
+                                
+                            {
 
-                                // CHANGE SPLURB FIRST LINE BODY TEXT TO NOT KNOWN --
-                                // //////////////////////////////////////////////////
-
-                                    var getRandomUnkownResponse = makeUnkownResultsBlurb[(Math.floor(Math.random() * makeUnkownResultsBlurb.length))]
-
-                                    getResultsSplurbBodyText.textContent = `${getRandomUnkownResponse}`
-
-
-
-
-
-
-
-                                // CHANGE RESULTS CORRECT ANSWER CARD TO NOT KNOWN --
-                                // //////////////////////////////////////////////////
-
-                                    getResultsCardMainContainer.style = `
-                                    
-                                        width:100%;
-                                        display:block;
-                                        opacity:0;
-                                        transform:translateY(30px);
-                                        margin-top:30px;
-                                        transition:all 600ms ease;
-                                        -o-transition:all 600ms ease;
-                                        -ms-transition:all 600ms ease;
-                                        -moz-transition:all 600ms ease;
-                                        -webkit-transition:all 600ms ease;
-
-                                    `
-
-                                        // THEN FADE OUT ////////////////////////////
-                                        // //////////////////////////////////////////
-
-                                            setTimeout(() => {
-
-                                                getResultsCardMainContainer.style = `
-                                            
-                                                    width:100%;
-                                                    display:none;
-                                                    opacity:0;
-                                                    transform:translateY(30px);
-                                                    margin-top:30px;
-                                                    transition:all 600ms ease;
-                                                    -o-transition:all 600ms ease;
-                                                    -ms-transition:all 600ms ease;
-                                                    -moz-transition:all 600ms ease;
-                                                    -webkit-transition:all 600ms ease;
-    
-                                                `
-
-                                            }, 300)
-
-
-
-
-
-                                    
-
-                                // SWITCH ON UNKOWN CARD BLOCK ----------------------
-                                // //////////////////////////////////////////////////
-
-                                    getResultsUnkownCardBlock.style = `
-                                    
-                                        width:100%;
-                                        display:block;
-                                        opacity:0;
-                                        transform:translateY(30px);
-                                        margin-top:30px;
-                                        transition:all 600ms ease;
-                                        -o-transition:all 600ms ease;
-                                        -ms-transition:all 600ms ease;
-                                        -moz-transition:all 600ms ease;
-                                        -webkit-transition:all 600ms ease;
-
-                                    `
-
-                                        // THEN FADE IN /////////////////////////////
-                                        // //////////////////////////////////////////
-
-                                            setTimeout(() => {
-
-                                                getResultsUnkownCardBlock.style = `
-                                    
-                                                    width:100%;
-                                                    display:block;
-                                                    opacity:1;
-                                                    transform:translateY(0px);
-                                                    margin-top:30px;
-                                                    transition:all 600ms ease;
-                                                    -o-transition:all 600ms ease;
-                                                    -ms-transition:all 600ms ease;
-                                                    -moz-transition:all 600ms ease;
-                                                    -webkit-transition:all 600ms ease;
-
-                                                `
-
-                                            }, 300)
-
-                                        
+                                getSelectedAnswer = collectQuestions.indexOf(`${mixer.toLowerCase()}`)
 
                             }
 
 
-                    }
+
+                    })
+
+
+                        // FOUND ANSWER POPULATE ''''''''''''''''''''''''''''''''''''
+                        // //////////////////////////////////////////////////////////
+
+                            // IF THE NUMBER IS BIGGER THAN ZERO ====================
+                            // //////////////////////////////////////////////////////
+
+                                if ( getSelectedAnswer != -1 ){
+
+                                    console.log("WE KNOW THE ANSWER: " + getSelectedAnswer)
+
+                                    whenAnswerIsFound(getSelectedAnswer)
+
+                                        // RESET ANSWER TRACKER ---------------------
+                                        // //////////////////////////////////////////
+
+                                            getSelectedAnswer = -1
+
+                                }
+
+                            // IF THE NUMBER IS LESS THAN ZERO ======================
+                            // //////////////////////////////////////////////////////
+
+                                else if ( getSelectedAnswer == -1 ){
+
+                                    console.log("WE DONT KNOW THE ANSWER: " + getSelectedAnswer)
+
+                                    whenAnswerIsNotFound()
+
+                                        // RESET ANSWER TRACKER ---------------------
+                                        // //////////////////////////////////////////
+
+                                            getSelectedAnswer = -1
+
+                                }
+
+
+
+                    
 
 
 
