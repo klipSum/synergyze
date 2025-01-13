@@ -28,7 +28,7 @@
                 left:0px;
                 right:0px;
                 margin:0px auto;
-                padding:20px 0px;
+                padding:15px 0px;
                 position:relative;
                 transform:translateY(-3px);
                 background:#FFFFFF;
@@ -102,7 +102,7 @@
 
             .scriptedMainElementsControl{
 
-                width:400px;
+                width:350px;
                 height:100%;
                 top:0;
                 left:0;
@@ -227,9 +227,468 @@
 
                 
 
-    /* ELEMENTS FOR NAV BAR SECTION ------------------------------------------------- */
+    /* STANDARD ENOWA NAV BAR CONTAINER GOES HERE ----------------------------------- */
     /* ////////////////////////////////////////////////////////////////////////////// */
 
+        .scriptedNavBarSectionContainer{
+
+            width:400px;
+            z-index:2;
+            top:20px;
+            left:0px;
+            right:0px;
+            margin:0px auto;
+            position:fixed;
+            transition:all 600ms ease;
+            -o-transition:all 600ms ease;
+            -ms-transition:all 600ms ease;
+            -moz-transition:all 600ms ease;
+            -webkit-transition:all 600ms ease;
+
+        }
+
+            /* NAV BAR ACTUAL CONTAINER STARTS HERE --------------------------------- */
+            /* ////////////////////////////////////////////////////////////////////// */
+
+                .scriptedNavBarElementContainer{
+
+                    width:100%;
+                    top:0px;
+                    z-index:1;
+                    padding:20px 0px;
+                    position:absolute;
+                    background:#FFFFFF;
+                    box-shadow:0px 30px 30px -20px rgba(0, 0, 0, 0.2);
+                    border-radius:1000px;
+                    transition:all 600ms ease;
+                    -o-transition:all 600ms ease;
+                    -ms-transition:all 600ms ease;
+                    -moz-transition:all 600ms ease;
+                    -webkit-transition:all 600ms ease;
+
+                }
+
+                    .scriptedNavBarElementResizer{
+
+                        width:90%;
+                        height:40px;
+                        left:0px;
+                        right:0px;
+                        margin:0px auto;
+                        position:relative;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        /* NAV BAR LOGO SIDE CONTAINER ////////////////////////////// */
+                        /* ////////////////////////////////////////////////////////// */
+
+                            .scriptedNavBarElementLogoSideContainer{
+
+                                width:150px;
+                                height:40px;
+                                float:left;
+                                position:relative;
+                                transition:all 600ms ease;
+                                -o-transition:all 600ms ease;
+                                -ms-transition:all 600ms ease;
+                                -moz-transition:all 600ms ease;
+                                -webkit-transition:all 600ms ease;
+
+                            }
+
+                                .scriptedNavBarElementLogoActual{
+
+                                    width:100%;
+                                    height:100%;
+                                    top:0;
+                                    left:0;
+                                    right:0;
+                                    bottom:0;
+                                    margin:auto;
+                                    position:absolute;
+                                    background:url("/images/logosAndIcons/logos/enowaLogo.png");
+                                    background-size:cover;
+                                    background-repeat:no-repeat;
+                                    background-position:center;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                        /* NAV BAR MENU OPEN SIDE CONTAINER ///////////////////////// */
+                        /* ////////////////////////////////////////////////////////// */
+
+                            .scriptedNavBarElementMenuSideContainer{
+
+                                width:40px;
+                                height:40px;
+                                float:right;
+                                cursor:pointer;
+                                transition:all 600ms ease;
+                                -o-transition:all 600ms ease;
+                                -ms-transition:all 600ms ease;
+                                -moz-transition:all 600ms ease;
+                                -webkit-transition:all 600ms ease;
+
+                            }
+
+                                .scriptedNavBarElementMenuContainer{
+
+                                    width:100%;
+                                    height:100%;
+                                    position:relative;
+                                    background:#2D3D4C;
+                                    border-radius:1000px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    /* CLCIKER CONTAINER //////////////////////////// */
+                                    /* ////////////////////////////////////////////// */
+
+                                        .scriptedNavBarElementMenuClickerContainer{
+
+                                            width:100%;
+                                            height:100%;
+                                            z-index:1;
+                                            position:absolute;
+                                            transition:all 600ms ease;
+                                            -o-transition:all 600ms ease;
+                                            -ms-transition:all 600ms ease;
+                                            -moz-transition:all 600ms ease;
+                                            -webkit-transition:all 600ms ease;
+                                            
+                                        }
+
+                                            .scriptedNavBarElementMenuClickerOn{
+
+                                                width:100%;
+                                                height:100%;
+                                                z-index:1;
+                                                position:absolute;
+                                                /* background:#6ab4e8; */
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+                                            .scriptedNavBarElementMenuClickerOff{
+
+                                                width:100%;
+                                                height:100%;
+                                                z-index:0;
+                                                position:absolute;
+                                                /* background:#f4dd5a; */
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+
+
+                                    /* ICON CONTAINER /////////////////////////////// */
+                                    /* ////////////////////////////////////////////// */
+
+                                        .scriptedNavBarElementMenuIconContainer{
+
+                                            width:40%;
+                                            height:40%;
+                                            z-index:0;
+                                            top:0;
+                                            left:0;
+                                            right:0;
+                                            bottom:0;
+                                            margin:auto;
+                                            position:absolute;
+                                            transition:all 600ms ease;
+                                            -o-transition:all 600ms ease;
+                                            -ms-transition:all 600ms ease;
+                                            -moz-transition:all 600ms ease;
+                                            -webkit-transition:all 600ms ease;
+
+                                        }
+
+                                            .scriptedNavBarElementMenuIconLineOne{
+
+                                                width:100%;
+                                                height:3px;
+                                                top:-15px;
+                                                left:0;
+                                                right:0;
+                                                bottom:0;
+                                                margin:auto;
+                                                position:absolute;
+                                                background:#FFFFFF;
+                                                border-radius:1000px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+                                            .scriptedNavBarElementMenuIconLineTwo{
+
+                                                width:100%;
+                                                height:3px;
+                                                top:-1px;
+                                                left:0;
+                                                right:0;
+                                                bottom:0;
+                                                margin:auto;
+                                                position:absolute;
+                                                background:#FFFFFF;
+                                                border-radius:1000px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+                                            .scriptedNavBarElementMenuIconLineThree{
+
+                                                width:100%;
+                                                height:3px;
+                                                top:13px;
+                                                left:0;
+                                                right:0;
+                                                bottom:0;
+                                                margin:auto;
+                                                position:absolute;
+                                                background:#FFFFFF;
+                                                border-radius:1000px;
+                                                transition:all 600ms ease;
+                                                -o-transition:all 600ms ease;
+                                                -ms-transition:all 600ms ease;
+                                                -moz-transition:all 600ms ease;
+                                                -webkit-transition:all 600ms ease;
+
+                                            }
+
+
+
+
+
+
+
+
+
+            /* NAV BAR MENU ITEMS CONTAINER ----------------------------------------- */
+            /* ////////////////////////////////////////////////////////////////////// */
+
+                .scriptedNavBarElementMenuItemsContainer{
+
+                    width:350px;
+                    top:80px;
+                    left:0;
+                    right:0;
+                    z-index:1;
+                    position:absolute;
+                    transition:all 600ms ease;
+                    -o-transition:all 600ms ease;
+                    -ms-transition:all 600ms ease;
+                    -moz-transition:all 600ms ease;
+                    -webkit-transition:all 600ms ease;
+
+                }
+
+                    .scriptedNavBarElementMenuItemsElementPointerContainer{
+
+                        width:15px;
+                        height:15px;
+                        top:-6px;
+                        right:-3px;
+                        float:right;
+                        margin:0px auto;
+                        z-index:0;
+                        position:absolute;
+                        border-radius:5px;
+                        transform:rotateZ(45deg);
+                        background:#2D3D4C;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                    .scriptedNavBarElementMenuItemsElement{
+
+                        width:50px;
+                        float:right;
+                        right:-30px;
+                        margin:0px auto;
+                        border:3px solid #2D3D4C;
+                        z-index:1;
+                        padding:10px 10px;
+                        position:absolute;
+                        box-shadow:0px 20px 30px -10px rgba(0, 0, 0, 0.5);
+                        background:#FFFFFF;
+                        border-radius:10px;
+                        transition:all 600ms ease;
+                        -o-transition:all 600ms ease;
+                        -ms-transition:all 600ms ease;
+                        -moz-transition:all 600ms ease;
+                        -webkit-transition:all 600ms ease;
+
+                    }
+
+                        .scriptedNavBarElementMenuItemsResizer{
+
+                            width:100%;
+                            transition:all 600ms ease;
+                            -o-transition:all 600ms ease;
+                            -ms-transition:all 600ms ease;
+                            -moz-transition:all 600ms ease;
+                            -webkit-transition:all 600ms ease;
+
+                        }
+
+                            /* ITEM LINE ONE CONTAINER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedNavBarElementMenuItemsItemOneContainer{
+
+                                    width:100%;
+                                    cursor:pointer;
+                                    padding:5px 0px 8px 0px;
+                                    font-size:15px;
+                                    background:#8ed9d9;
+                                    font-weight:600;
+                                    font-family:arial, sans-serif;
+                                    border-radius:4px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+
+
+
+
+
+                            /* ITEMS DIVIDER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedNavBarElementMenuItemsDividerContainer{
+
+                                    width:100%;
+                                    padding:3px 0px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+                                    .scriptedNavBarElementMenuItemsDividerActual{
+
+                                        width:100%;
+                                        height:3px;
+                                        background:#f0efef;
+                                        transition:all 600ms ease;
+                                        -o-transition:all 600ms ease;
+                                        -ms-transition:all 600ms ease;
+                                        -moz-transition:all 600ms ease;
+                                        -webkit-transition:all 600ms ease;
+
+                                    }
+
+
+
+
+                                    
+
+                            /* ITEM LINE TWO CONTAINER xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+                            /* ////////////////////////////////////////////////////// */
+
+                                .scriptedNavBarElementMenuItemsItemTwoContainer{
+
+                                    width:100%;
+                                    cursor:pointer;
+                                    padding:5px 0px 8px 0px;
+                                    font-size:15px;
+                                    background:#8ed9d9;
+                                    font-weight:600;
+                                    font-family:arial, sans-serif;
+                                    border-radius:4px;
+                                    transition:all 600ms ease;
+                                    -o-transition:all 600ms ease;
+                                    -ms-transition:all 600ms ease;
+                                    -moz-transition:all 600ms ease;
+                                    -webkit-transition:all 600ms ease;
+
+                                }
+
+
+
+
+
+
+
+
+
+            /* NAV BAR BACKGROUND BLOCKER ------------------------------------------- */
+            /* ////////////////////////////////////////////////////////////////////// */
+
+                .scriptedNavBarBackgroundBlocker{
+
+                    width:100%;
+                    height:50px;
+                    top:0px;
+                    left:0;
+                    right:0;
+                    z-index:0;
+                    margin:auto;
+                    position:fixed;
+                    background:#CFE8E9;
+                    transition:all 600ms ease;
+                    -o-transition:all 600ms ease;
+                    -ms-transition:all 600ms ease;
+                    -moz-transition:all 600ms ease;
+                    -webkit-transition:all 600ms ease;
+
+                }
+
+
+
+
+
+
+
+
+
+                
+
+    
+    
+    
     /* ELEMENTS FOR SEARCH BAR SECTION ---------------------------------------------- */
     /* ////////////////////////////////////////////////////////////////////////////// */
 
@@ -241,9 +700,9 @@
                 width:100%;
                 z-index:1;
                 /* height:50%; */
-                padding:50px 0px;
+                padding:40px 0px;
                 position:relative;
-                margin-top:50px;
+                margin-top:130px;
                 /* background:#24839b; */
                 background:#F9F9F9;
                 border-radius:10px;
@@ -326,7 +785,7 @@
                                         font-size:25px;
                                         font-weight:900;
                                         font-family:arial, sans-serif;
-                                        letter-spacing:15px;
+                                        letter-spacing:10px;
                                         transition:all 600ms ease;
                                         -o-transition:all 600ms ease;
                                         -ms-transition:all 600ms ease;
@@ -582,7 +1041,7 @@
 
             width:100%;
             z-index:0;
-            padding:50px 0px;
+            padding:40px 0px;
             opacity:1;
             display:none;
             position:relative;
@@ -709,7 +1168,7 @@
                             right:0px;
                             cursor:pointer;
                             margin:0px auto;
-                            padding:20px 0px;
+                            padding:15px 0px;
                             position:relative;
                             transform:translateX(0px);
                             background:#FFFFFF;
@@ -730,7 +1189,7 @@
 
                                 .scriptedResultsCorrectAsnwerCardActualHeaderContainer{
 
-                                    width:90%;
+                                    width:85%;
                                     left:0px;
                                     right:0px;
                                     margin:0px auto;
@@ -745,7 +1204,7 @@
 
                                     .scriptedResultsCorrectAsnwerCardActualHeaderActual{
 
-                                        width:70%;
+                                        width:80%;
                                         display:block;
                                         font-size:14px;
                                         text-align:left;
@@ -767,13 +1226,13 @@
 
                                 .scriptedResultsCorrectAsnwerCardActualImageContainer{
 
-                                    width:90%;
+                                    width:85%;
                                     left:0;
                                     right:0;
                                     display:inline-block;
                                     position:relative;
                                     margin-top:20px;
-                                    box-shadow:0px 30px 30px -10px rgba(0, 0, 0, 0.5);
+                                    box-shadow:0px 20px 30px -10px rgba(0, 0, 0, 0.5);
                                     border-radius:8px;
                                     transition:all 600ms ease;
                                     -o-transition:all 600ms ease;
@@ -820,7 +1279,7 @@
 
                                     .scriptedResultsCorrectAsnwerCardActualDescriptionActual{
                                         
-                                        width:90%;
+                                        width:85%;
                                         left:0px;
                                         right:0px;
                                         margin:0px auto;
@@ -845,7 +1304,7 @@
 
                                 .scriptedResultsCorrectAsnwerCardActualGoButtonContainer{
 
-                                    width:90%;
+                                    width:85%;
                                     height:40px;
                                     display:inline-block;
                                     margin-top:20px;
@@ -865,7 +1324,7 @@
 
                                         .scriptedResultsCorrectAsnwerCardActualGoButtonTextSideContainer{
 
-                                            width:86%;
+                                            width:83%;
                                             height:40px;
                                             float:left;
                                             transition:all 600ms ease;
@@ -900,7 +1359,7 @@
 
                                         .scriptedResultsCorrectAsnwerCardActualGoButtonSideContainer{
 
-                                            width:14%;
+                                            width:40.45px;
                                             height:40px;
                                             float:right;
                                             transition:all 600ms ease;
@@ -935,7 +1394,7 @@
                                                         width:20px;
                                                         height:20px;
                                                         top:0;
-                                                        left:0;
+                                                        left:-2px;
                                                         right:0;
                                                         bottom:0;
                                                         margin:auto;
@@ -1065,7 +1524,7 @@
                             left:0px;
                             right:0px;
                             margin:0px auto;
-                            padding:20px 0px;
+                            padding:15px 0px;
                             position:relative;
                             transform:translateX(0px);
                             background:#FFFFFF;

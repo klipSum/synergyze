@@ -1048,7 +1048,7 @@
                                     
                                         width:100%;
                                         z-index:0;
-                                        padding:50px 0px;
+                                        padding:40px 0px;
                                         opacity:0;
                                         display:inline-block;
                                         position:relative;
@@ -1075,7 +1075,7 @@
                                     
                                                     width:100%;
                                                     z-index:0;
-                                                    padding:50px 0px;
+                                                    padding:40px 0px;
                                                     opacity:1;
                                                     display:inline-block;
                                                     position:relative;
@@ -1340,7 +1340,7 @@
                                     
                                         width:100%;
                                         z-index:0;
-                                        padding:50px 0px;
+                                        padding:40px 0px;
                                         opacity:0;
                                         display:inline-block;
                                         position:relative;
@@ -1367,7 +1367,7 @@
                                     
                                                     width:100%;
                                                     z-index:0;
-                                                    padding:50px 0px;
+                                                    padding:40px 0px;
                                                     opacity:1;
                                                     display:inline-block;
                                                     position:relative;
@@ -1560,6 +1560,11 @@
                                         // //////////////////////////////////////////
 
                                             getSelectedAnswer = -1
+
+                                                // ACTIVATE SELF REPORT UNKOWN QUESTION
+                                                // /////////////////////////////////
+
+
 
                                 }
 
